@@ -434,22 +434,22 @@ class SpotlightView extends WatchUi.WatchFace {
         // if this is an OLED watch and we're in low power,
         // don't draw icons, because that will trigger the
         // burn-in protection
-        if (!(low_power && screen_burn_in_possible)) {
-            if (notification_style != 0) {
-                var device = System.getDeviceSettings();
-                if (device.notificationCount > 0) {
-                    if (notification_style == 1) {
-                        drawNotificationCircle(dc);
-                    } else {
-                        drawNotificationEnvelope(dc);
-                    }
-                }
-            }
+        // if (!(low_power && screen_burn_in_possible)) {
+        //     if (notification_style != 0) {
+        //         var device = System.getDeviceSettings();
+        //         if (device.notificationCount > 0) {
+        //             if (notification_style == 1) {
+        //                 drawNotificationCircle(dc);
+        //             } else {
+        //                 drawNotificationEnvelope(dc);
+        //             }
+        //         }
+        //     }
 
-            if (System.getSystemStats().battery < battery_threshold) {
-                drawBatteryLow(dc);
-            }
-        }
+        //     if (System.getSystemStats().battery < battery_threshold) {
+        //         drawBatteryLow(dc);
+        //     }
+        // }
     }
 
     // Only for performance measuring. Don't need this during normal
